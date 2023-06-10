@@ -2,24 +2,35 @@ import React, { useState } from 'react';
 import './Passengers.css';
 
 export const Passengers = ({ state, send }) => {
-  const [value, changeValue] = useState('');
+  const [value, setValue] = useState('');
+  const [alert, setAlert] = useState(false);
 
   const onChangeInput = (e) => {
-    changeValue(e.target.value);
+    setValue(e.target.value);
   }
 
   const goToTicket = () => {
-    send('DONE')
+    if (passengers.length !== 0) {
+      send('DONE') 
+    } else {
+      setAlert(true)
+    }
   }
 
   const submit = (e) => {
-    e.preventDefault();
-    changeValue('');
+      e.preventDefault();
+      send('ADD', { newPassenger: value })
+      setValue('');
   }
+
+  const { passengers } = state.context;
+
+
 
   return (
     <form onSubmit={submit} className='Passengers'>
-      <p className='Passengers-title title'>Agrega a las personas que van a volar ✈️</p>
+      <p className='Passengers-title title'>Add passengers ✈️</p>
+      {passengers.length > 0 ? passengers.map((x, id) => <p className="text" key={`person-${id}`}>{x}</p>) : []}
       <input 
         id="name" 
         name="name" 
@@ -34,16 +45,17 @@ export const Passengers = ({ state, send }) => {
           className='Passengers-add button-secondary'
           type="submit"
         >
-          Agregar Pasajero
+          Add new passenger
         </button>
         <button
           className='Passenger-pay button'
           type="button"
           onClick={goToTicket}
-        >
-          Ver mi ticket
+          >
+          View my ticket
         </button>
       </div>
+        {alert && <p className='alerta'> The passengers list cannot be empty </p>}
     </form>
   );
 };

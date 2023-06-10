@@ -27,3 +27,8 @@
 .Passengers-title {
   margin-bottom: 16px;
 }
+
+.alerta {
+  color: red;
+  width: 100%;
+}

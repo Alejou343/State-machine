@@ -7,7 +7,7 @@ body {
 
 .button {
   border: none;
-  background-color: #4F54A7;
+  background-color: #019bca;
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
@@ -17,7 +17,7 @@ body {
 }
 
 .button:hover {
-  background-color: #293684;
+  background-color: #2f9cbd;
 }
 
 .button-secondary {
@@ -25,14 +25,14 @@ body {
   background-color: rgba(255,255,255,0.8);
   padding: 8px 16px;
   border-radius: 8px;
-  color: #4F54A7;
+  color: #019bca;
   font-weight: bold;
   cursor: pointer;
   transition: all ease 300ms;
 }
 
 .button-secondary:hover {
-  color: #293684;
+  color: #2f9cbd;
   background-color: white;
 }
 
