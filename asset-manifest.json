@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/state-machine/static/css/main.ebf0e643.css",
+    "main.js": "/state-machine/static/js/main.521670d5.js",
+    "static/media/background-travel-3.jpg": "/state-machine/static/media/background-travel-3.d4b7a5c641bdf64a8980.jpg",
+    "index.html": "/state-machine/index.html",
+    "main.ebf0e643.css.map": "/state-machine/static/css/main.ebf0e643.css.map",
+    "main.521670d5.js.map": "/state-machine/static/js/main.521670d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebf0e643.css",
+    "static/js/main.521670d5.js"
+  ]
+}
